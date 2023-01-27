@@ -1,16 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 import { Inputs } from "./components/ComponentIndex";
-import expenses from './data';
+import expenses from "./data";
 
+// const p = expenses.price;
+const total = expenses.reduce((total, value) => {
+  return total + value.price;
+}, 0);
 
 function App() {
   return (
     <>
-     {expenses.map((e) => (
-        <Inputs id={e.id} name={e.name} price= {e.price}/>
+      {expenses.map((e) => (
+        <Inputs id={e.id} name={e.name} price={e.price} />
       ))}
-    
+      <h3>Total: {total} </h3>
     </>
   );
 }
