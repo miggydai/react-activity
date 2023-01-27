@@ -1,15 +1,28 @@
 .container {
+    width: 100% ;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+
+
+.box {
     width: 50%;
+    margin: 10px;
     height:50px;
     background-color: aqua;
     margin: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
-    
-
+.box:hover {
+    background-color: aquamarine;
 }
 
 .button {
